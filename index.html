@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de audiovisual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Lista de audiovisual</h1>
+        <ul>
+            {% for audiovis in audiovisual %}
+            <li>{{ audiovis[1] }} - {{ audiovis[2] }} - {{ audiovis[3] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('novo_audiovisual') }}"><button class="add-audio">Adicionar Novo Audiovisual</button></a>
+        <a href="{{ url_for('limpar_audio') }}" class="clear-btn">Limpar Lista de Audiovisual</a>
+    </div>
+
+    
+</body>
+
+
+
+</html>

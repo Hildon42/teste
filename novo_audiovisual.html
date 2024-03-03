@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Novo audiovisual</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='novo_audiovisual.css') }}">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Adicionar Novo Paciente</h1>
+        <form action="{{ url_for('novo_audiovisual') }}" method="POST">
+
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required><br><br>
+
+            <label for="nomeaudivisual">Nome do que foi assistido:</label>
+            <input type="text" id="nomeaudivisual" name="nomeaudivisual" required><br><br>
+
+            <label for="telefone">Data assistida:</label>
+            <input type="date" id="data_assis" name="data_assis" required><br><br>
+
+            <label for="nome_tipoproduc">Tipo da produção:</label>
+            <select id="nome_tipoproduc" name="nome_tipoproduc" required><br><br>
+                 <option value="FM">Filme</option>
+                 <option value="SE">Série</option>
+                 <option value="DM">Documentário</option>
+            </select>
+
+            <label for="nome_gen">Genero:</label>
+            <select id="nome_gen" name="nome_gen" required><br><br>
+                 <option value="A">Ação</option>
+                 <option value="av">Aventura</option>
+                 <option value="c">Comédia</option>
+                 <option value="t">Terror</option>
+                 <option value="r">Romance</option>
+                 <option value="D">Drama</option>
+                 <option value="do">Documentário</option>
+                 <option value="e">Espionagem</option>
+                 <option value="f">Fantasia</option>
+                 <option value="fi">Ficção cientifica</option>
+                 <option value="g">Filme de guerra</option>
+                 <option value="m">Musical</option>
+                 <option value="p">Filme policial</option>
+                  
+            <input type="submit" id="Adicionar Audiovisual" class="submit-btn">
+        </form>
+    </div>
+</body>
